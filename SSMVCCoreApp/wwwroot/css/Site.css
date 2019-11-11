@@ -1,0 +1,20 @@
+﻿body {
+  font-family: 'Bookman Old Style', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-purple {
+  background-color: mediumpurple;
+}
+
+.modelTextLowerCase {
+  text-transform: lowercase;
+}
+
+.modelTextCapitalizeCase {
+  text-transform: capitalize;
+}
+
+.dataPlacement {
+  padding-top: 65px;
+  padding-bottom: 20px;
+}

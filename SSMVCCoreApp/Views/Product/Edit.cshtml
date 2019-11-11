@@ -1,0 +1,43 @@
+﻿@model Product
+@{
+  ViewData["Title"] = "Edit";
+}
+<h4>Editing Product With ID - @Model.ProductId</h4>
+<div class="row container-fluid">
+  <form asp-controller="Product" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger">
+    </div>
+    <input asp-for="ProductId" type="hidden" />
+    <div class="form-group">
+      <label asp-for="ProductName" class="labelWidth">Product Name:</label>
+      <input asp-for="ProductName" class="form-control" />
+      <span asp-validation-for="ProductName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="Description" class="labelWidth">Description:</label>
+      <input asp-for="Description" class="form-control" />
+      <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="Price" class="labelWidth">Price:</label>
+      <input asp-for="Price" class="form-control" />
+      <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+      <label asp-for="Category" class="labelWidth">Category:</label>
+      <input asp-for="Category" class="form-control" />
+      <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="Photo" class="labelWidth">Photo</label>
+      <input asp-for="PhotoUrl" type="hidden" />
+      <img src="@Model.PhotoUrl" height="120" width="120" />
+      <input type="file" name="Photo" value="Change Photo" />
+    </div>
+    <div class="form-group text-center">
+      <input type="submit" value="Update Product" class="btn btn-outline-primary" />
+      <a asp-controller="Product" asp-action="List" class="btn btn-outline-info">All Products</a>
+    </div>
+  </form>
+</div>

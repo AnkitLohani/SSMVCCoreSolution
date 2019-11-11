@@ -1,0 +1,22 @@
+﻿<nav class="navbar navbar-dark fixed-top bg-purple navbar-expand-md">
+  <a class="navbar-brand" asp-controller="Product" asp-action="Index">Sports Store</a>
+  <button class="navbar-toggler" type="button" data-target="#navigationContent"
+          data-toggle="collapse" aria-controls="navigationContent"
+          aria-expanded="false" aria-label="Toggle Navigation">
+    @*<span class="navbar-toggler-icon"></span>*@
+    <span class="fa fa-chevron-down"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navigationContent">
+    <ul class="navbar-nav mr-auto">
+      <li><a class="nav-link" asp-controller="Product" asp-action="List">Products</a></li>
+      <li><a class="nav-link" asp-controller="About" asp-action="Index">About</a></li>
+      <li><a class="nav-link" asp-controller="About" asp-action="Throw">Throw</a></li>
+    </ul>
+  </div>
+  <div class="navbar dropright">
+    @if (TempData["newproduct"] != null)
+    {
+      <span class="text-white">@TempData["newproduct"]</span>
+    }
+  </div>
+</nav>
